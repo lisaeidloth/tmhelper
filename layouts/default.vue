@@ -53,7 +53,7 @@ const nav = reactive([
   },
 ])
 
-const mobile = useDisplay().mobile
+const mobile = false //useDisplay().mobile
 </script>
 
 
