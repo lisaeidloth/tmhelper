@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "push-dir --dir=.output/public --branch=gh-pages --cleanup"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.6.0",
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18",
+    "nuxt": "^3.5.2"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.3",
+    "push-dir": "^0.4.1",
+    "sass": "^1.63.2",
+    "vuetify": "^3.3.3"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}

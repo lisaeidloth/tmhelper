@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "pytm",
+    "name": "pytm",
+    "description": "pytm ist ein auf Python basierendes Threat Modeling Tool, welches 2020 entwickelt wurde und Threat Modeling automatisierter und von Entwicklern nutzbar zu machen. Hierbei wird von Entwicklern eine Beschreibung des zu analysierenden Systems bereitgestellt. Auf dieser Basis erstellt pytm, je nach Bedarf, Datenflussdiagramme, Sequenz-Diagramme und gibt Informationen zu potenziellen Threats aus.",
+    "rating": {
+      "agile-methoden": -1,
+      "tool-integration": 1,
+      "arbeitsteiligkeit": 1,
+      "templates": -1,
+      "datenhaltung": 1,
+      "kosten": 1,
+      "konfigurierbar": -1,
+      "einstiegshürde": -1,
+      "multi-plattform": 1
+    }
+  },
+  {
+    "slug": "mtmt",
+    "name": "Microsoft Thread Modeling Tool",
+    "description": "Das Microsoft Thread Modeling Tool richtet sich primär an Softwarearchitekten und ermöglicht es diesen, potenzielle Sicherheitslücken früh im Entwicklungsprozess zu erkennen und mit geeigneten Maßnahmen entgegenzuwirken.",
+    "rating": {
+      "agile-methoden": -1,
+      "tool-integration": -1,
+      "arbeitsteiligkeit": -1,
+      "templates": 1,
+      "datenhaltung": -1,
+      "kosten": 1,
+      "konfigurierbar": -1,
+      "einstiegshürde": 1,
+      "multi-plattform": -1
+    }
+  },
+  {
+    "slug": "threagile",
+    "name": "Threagile",
+    "description": "Threagile ist ein Command-Line basiertes Threat Modeling Tool. Die Architektur der zu untersuchenden Anwendung wird in YAML-Dateien modelliert. Dabei können sog. Data Assets, Technical Assets, Communication-Links und Trust Boundaries definiert werden. Es ist leicht automatisierbar und daher sehr gut für agile Softwareentwicklungsprozesse geeignet. Da die Softwarearchitektur in YAML-Dateien definiert wird, lässt es sich auch gut in Version Control Systeme wie git einpflegen.",
+    "rating": {
+      "agile-methoden": -1,
+      "tool-integration": 1,
+      "arbeitsteiligkeit": 1,
+      "templates": -1,
+      "datenhaltung": 1,
+      "kosten": 1,
+      "konfigurierbar": 1,
+      "einstiegshürde": -1,
+      "multi-plattform": 1
+    }
+  },
+  {
+    "slug": "owasp-thread-dragon",
+    "name": "OWASP Thread Dragon",
+    "description": "OWASP Threat Dragon ist ein grafisches und quelloffenens Threat-Modeling-Tool, das es erlaubt die drei verschiedenen Methodiken STRIDE, LIDDUN und CIA in Software-Entwicklungsprozessen zu nutzen.",
+    "rating": {
+      "agile-methoden": -1,
+      "tool-integration": -1,
+      "arbeitsteiligkeit": -1,
+      "templates": -1,
+      "datenhaltung": -1,
+      "kosten": -1,
+      "konfigurierbar": -1,
+      "einstiegshürde": 1,
+      "multi-plattform": -1
+    }
+  },
+  {
+    "slug": "cairis",
+    "name": "Cairis",
+    "description": "Cairis steht für “Computer Aided Integration of Requirements and Information Security” und bietet eine Plattform für die Erarbeitung, Spezifikation und Validierung sicherer und benutzbarer Systeme.",
+    "rating": {
+      "agile-methoden": 1,
+      "tool-integration": 1,
+      "arbeitsteiligkeit": -1,
+      "templates": -1,
+      "datenhaltung": -1,
+      "kosten": 1,
+      "konfigurierbar": -1,
+      "einstiegshürde": 1,
+      "multi-plattform": -1
+    }
+  }
+]

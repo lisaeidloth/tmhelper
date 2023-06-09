@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "agile-methoden",
+    "name": "Abbildung agiler Arbeitsmethoden möglich (User Stories, Sprints etc.)"
+  },
+  {
+    "slug": "tool-integration",
+    "name": "Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools"
+  },
+  {
+    "slug": "arbeitsteiligkeit",
+    "name": "Unterstützung von Arbeitsteiligkeit auf Personen-/Teamebene"
+  },
+  {
+    "slug": "templates",
+    "name": "Vordefinierte Templates für gängige Methoden (STRIDE, PASTA etc.)"
+  },
+  {
+    "slug": "datenhaltung",
+    "name": "Nicht-proprietäre interoperable Datenhaltung (z. B. Text-Formate)"
+  },
+  {
+    "slug": "kosten",
+    "name": "Kosten"
+  },
+  {
+    "slug": "konfigurierbar",
+    "name": "festgelegte Arbeitsweise / konfigurierbar"
+  },
+  {
+    "slug": "einstiegshürde",
+    "name": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder"
+  },
+  {
+    "slug": "multi-plattform",
+    "name": "Welches Betriebssystem"
+  }
+]
