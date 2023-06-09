@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: "github-pages"
+    preset: 'service-worker'
   },
   app: {
     baseURL: "/tmhelper"
