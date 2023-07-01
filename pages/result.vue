@@ -26,12 +26,12 @@
                   <span>{{ crit.name }}</span>
                   <div>
                     <v-icon
-                        :icon="result.tool.rating[crit.slug] > 0? 'mdi-check-circle-outline' : 'mdi-circle-outline'"
+                        :icon="result.isProvided.get(crit.slug)? 'mdi-check-circle-outline' : 'mdi-circle-outline'"
                         class="mr-4">
                     </v-icon>
                     <v-icon
-                        :color="questionStore.answers.find(it => it.criteriaSlug === crit.slug).answer === 2? 'primary' : undefined"
-                        :icon="questionStore.answers.find(it => it.criteriaSlug === crit.slug).answer > 0? 'mdi-check-circle-outline' : 'mdi-circle-outline'"
+                        :color="result.isRequested.get(crit.slug) === 2? 'primary' : undefined"
+                        :icon="result.isRequested.get(crit.slug) > 0? 'mdi-check-circle-outline' : 'mdi-circle-outline'"
                     ></v-icon>
                   </div>
 
@@ -67,27 +67,49 @@ const toolResult = computed(() => {
     return result
   } else {
     tools.value.body.forEach(tool => {
+      const isRequested = new Map<string, number>()
+      const isProvided = new Map<string, boolean>()
       let points = 0
       let accepted = true
       for(const critSlug in tool.rating) {
         // toolCritRating = rating of tool fulfilling criteria or not
-        const toolCritRating = tool.rating[critSlug]
+        const toolCritRating: number | number[] = tool.rating[critSlug]
         // answer = user's input in questionnaire
-        const answer = questionStore.answers.find(it => it.criteriaSlug === critSlug).answer
-        if(answer === 0 || (answer === 1 && toolCritRating > 0)) {
-          points++
-        } else if(answer === 2) {
-          if(toolCritRating > 0) {
+        const answer: number | number[] = questionStore.answers.find(it => it.criteriaSlug === critSlug).answer
+
+        //depending on rating or option do either..
+        if(toolCritRating?.length > 0) {
+          let allSupported = true
+          for(const key in answer as number[]) {
+            isRequested.set(critSlug, 2) //at least one wanted
+            if(!(key in (toolCritRating as number[]))) allSupported = false
+          }
+          if(allSupported) {
+            isProvided.set(critSlug, true)
             points++
-          } else {
-            accepted = false
+          }
+          else accepted = false
+        } else {
+          isRequested.set(critSlug, answer as number)
+          isProvided.set(critSlug, toolCritRating > 0)
+          if(answer === 0 || (answer === 1 && toolCritRating > 0)) {
+            points++
+          } else if(answer === 2) {
+            if(toolCritRating > 0) {
+              points++
+            } else {
+              accepted = false
+            }
           }
         }
+
       }
       result.push({
         tool: tool,
         points: points,
-        accepted: accepted
+        accepted: accepted,
+        isRequested: isRequested,
+        isProvided: isProvided
       })
     })
   }

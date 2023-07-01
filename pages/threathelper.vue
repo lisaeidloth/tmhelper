@@ -13,8 +13,18 @@
         </v-card>
       </Transition>
     </div>
+    <div v-if="data.body[currentCriteria].type === 'option'" class="d-flex flex-row">
+      <v-checkbox
+          v-for="option in data.body[currentCriteria].options"
+          :key="option.id"
+          :label="option.name"
+          v-model="currentOptions"
+          :value="option.key"
+      >
 
-    <v-slider min="0" max="2" v-model="currentRating" step="1" show-ticks="always" tick-size="10" :ticks="label"
+      </v-checkbox>
+    </div>
+    <v-slider v-else min="0" max="2" v-model="currentRating" step="1" show-ticks="always" tick-size="10" :ticks="label"
               color="primary" thumb-color="green" track-color="blue"
               append-icon="mdi-plus" prepend-icon="mdi-minus" ref="slider"
     ></v-slider>
@@ -36,12 +46,14 @@
 
 <script setup lang="ts">
 import {computed, useAsyncData} from "#imports";
-import {TestAnswer} from "~/utils/types";
+import {CriteriaContent, TestAnswer} from "~/utils/types";
 import {VSlider} from "vuetify/components/VSlider";
 import {useQuestionStore} from "~/stores/questionStore";
 
 const questionStore = useQuestionStore()
-const { data, pending } = useAsyncData('index', () => queryContent('/criteria').findOne())
+questionStore.reset()
+
+const { data, pending } = useAsyncData<CriteriaContent>('index', () => queryContent('/criteria').findOne())
 const label = {
   0: "egal",
   1: "wichtig",
@@ -52,10 +64,13 @@ const slider = ref<VSlider>()
 const leaveTo = ref("slide-left")
 const enterFrom = ref("slide-right")
 const currentCriteria = ref(questionStore.recentQuestionIndex)
-const currentRating = ref(0)
+
+const currentRating = ref(0) // for likert scale question
+const currentOptions = ref<Array<number>>([]) // for option type question
+
 const answers = questionStore.answers
 const lastQst = computed(() => {
-  return !pending.value && currentCriteria.value >= data.value.body.length - 1
+  return !pending.value && currentCriteria.value >= data.value!.body.length - 1
 })
 
 function next() {
@@ -63,11 +78,11 @@ function next() {
   leaveTo.value = "slide-left"
   const testAnswer: TestAnswer = {
     qIndex: currentCriteria.value,
-    criteriaSlug: data.value?.body[currentCriteria.value].slug,
-    answer: currentRating.value
+    criteriaSlug: data.value?.body[currentCriteria.value].slug!,
+    answer: data.value?.body[currentCriteria.value].type === "option"? currentOptions.value : currentRating.value
   }
   if(!questionStore.done) {
-    answers.push(testAnswer)
+    questionStore.updateAnswer(testAnswer)
   }
   if (lastQst.value) {
     // TODO
@@ -76,12 +91,18 @@ function next() {
   } else {
     currentCriteria.value += 1
     currentRating.value = 0
+    currentOptions.value = []
   }
 }
 
 function setCurrentQst(index: number) {
   if(currentCriteria.value < answers.length) {
-    answers[currentCriteria.value].answer = currentRating.value
+    if(data.value?.body[currentCriteria.value].type === "option") {
+      answers[currentCriteria.value].answer = currentOptions.value
+    } else {
+      answers[currentCriteria.value].answer = currentRating.value
+    }
+
   }
   if(index < currentCriteria.value) {
     enterFrom.value = "slide-left"
@@ -92,14 +113,15 @@ function setCurrentQst(index: number) {
   }
   currentCriteria.value = index
 
-
   if(index < answers.length) {
-    currentRating.value = answers[index].answer
+    if(data.value?.body[index].type === "option") {
+      currentOptions.value = answers[index].answer
+    } else currentRating.value = answers[index].answer
   } else {
+    currentOptions.value = []
     currentRating.value = 0
   }
 }
-
 </script>
 
 <style scoped>

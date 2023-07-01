@@ -3,7 +3,7 @@ import {TestAnswer} from "~/utils/types";
 
 export const useQuestionStore = defineStore("question", {
     state: () => ({
-        answers: [],
+        answers: [] as Array<TestAnswer>,
         done: ref(false)
     }),
     getters: {
@@ -15,6 +15,13 @@ export const useQuestionStore = defineStore("question", {
     actions: {
         setDone() {
             this.done = true
+        },
+        reset() {
+            this.answers = []
+            this.done = false
+        },
+        updateAnswer(answer: TestAnswer) {
+            this.answers[answer.qIndex] = answer
         }
     }
 })

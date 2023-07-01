@@ -1,38 +1,58 @@
 [
   {
     "slug": "agile-methoden",
+    "short": "Abbildung agiler Arbeitsmethoden möglich (User Stories, Sprints etc.)",
     "name": "Abbildung agiler Arbeitsmethoden möglich (User Stories, Sprints etc.)"
   },
   {
     "slug": "tool-integration",
+    "short":"Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools",
     "name": "Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools"
   },
   {
     "slug": "arbeitsteiligkeit",
+    "short": "Unterstützung von Arbeitsteiligkeit auf Personen-/Teamebene",
     "name": "Unterstützung von Arbeitsteiligkeit auf Personen-/Teamebene"
   },
   {
-    "slug": "templates",
-    "name": "Vordefinierte Templates für gängige Methoden (STRIDE, PASTA etc.)"
-  },
-  {
     "slug": "datenhaltung",
+    "short": "Nicht-proprietäre interoperable Datenhaltung (z. B. Text-Formate)",
     "name": "Nicht-proprietäre interoperable Datenhaltung (z. B. Text-Formate)"
   },
   {
     "slug": "kosten",
-    "name": "Kosten"
+    "short": "Kosten",
+    "name": "Das Tool soll kostenlos sein."
   },
   {
     "slug": "konfigurierbar",
+    "short": "festgelegte Arbeitsweise / konfigurierbar",
     "name": "festgelegte Arbeitsweise / konfigurierbar"
   },
   {
     "slug": "einstiegshürde",
+    "short": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder",
     "name": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder"
   },
   {
     "slug": "multi-plattform",
-    "name": "Welches Betriebssystem"
+    "short": "Welches Betriebssystem soll verwendet werden? (Antwort optional)",
+    "name": "Welches Betriebssystem soll verwendet werden? (Antwort optional)",
+    "type": "option",
+    "options": [
+      { "key": 1, "name": "Linux" },
+      { "key": 2, "name": "MacOS" },
+      { "key": 3, "name": "Windows" }
+    ]
+  },
+  {
+    "slug": "templates",
+    "short": "Soll das Tool vordefinierte Templates für gängige Threat-Modeling-Methoden bereitstellen? (Antwort optional)",
+    "name": "Soll das Tool vordefinierte Templates für gängige Threat-Modeling-Methoden bereitstellen? (Antwort optional)",
+    "type": "option",
+    "options": [
+      { "key": 1, "name": "STRIDE" },
+      { "key": 2, "name": "PASTA" }
+    ]
   }
 ]

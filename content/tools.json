@@ -7,12 +7,12 @@
       "agile-methoden": -1,
       "tool-integration": 1,
       "arbeitsteiligkeit": 1,
-      "templates": -1,
       "datenhaltung": 1,
       "kosten": 1,
       "konfigurierbar": -1,
       "einstiegshürde": -1,
-      "multi-plattform": 1
+      "multi-plattform": [1, 2, 3],
+      "templates": [1, 2]
     }
   },
   {
@@ -23,12 +23,12 @@
       "agile-methoden": -1,
       "tool-integration": -1,
       "arbeitsteiligkeit": -1,
-      "templates": 1,
       "datenhaltung": -1,
       "kosten": 1,
       "konfigurierbar": -1,
       "einstiegshürde": 1,
-      "multi-plattform": -1
+      "multi-plattform": [3],
+      "templates": [1, 2]
     }
   },
   {
@@ -39,12 +39,12 @@
       "agile-methoden": -1,
       "tool-integration": 1,
       "arbeitsteiligkeit": 1,
-      "templates": -1,
       "datenhaltung": 1,
       "kosten": 1,
       "konfigurierbar": 1,
       "einstiegshürde": -1,
-      "multi-plattform": 1
+      "multi-plattform": [1, 2, 3],
+      "templates": [1, 2]
     }
   },
   {
@@ -55,12 +55,12 @@
       "agile-methoden": -1,
       "tool-integration": -1,
       "arbeitsteiligkeit": -1,
-      "templates": -1,
       "datenhaltung": -1,
       "kosten": -1,
       "konfigurierbar": -1,
       "einstiegshürde": 1,
-      "multi-plattform": -1
+      "multi-plattform": [1, 2, 3],
+      "templates": [1, 2]
     }
   },
   {
@@ -71,12 +71,12 @@
       "agile-methoden": 1,
       "tool-integration": 1,
       "arbeitsteiligkeit": -1,
-      "templates": -1,
       "datenhaltung": -1,
       "kosten": 1,
       "konfigurierbar": -1,
       "einstiegshürde": 1,
-      "multi-plattform": -1
+      "multi-plattform": [1, 2, 3],
+      "templates": [1, 2]
     }
   }
 ]
