@@ -23,7 +23,7 @@
               </div>
               <div class="w-100 pa-3" v-for="crit in criteria.body" :key="crit.slug">
                 <div class="w-100 d-flex align-center justify-space-between">
-                  <span>{{ crit.name }}</span>
+                  <span style="max-width: 90%">{{ crit.name }}</span>
                   <div>
                     <v-icon
                         :icon="result.isProvided.get(crit.slug)? 'mdi-check-circle-outline' : 'mdi-circle-outline'"
@@ -79,10 +79,12 @@ const toolResult = computed(() => {
 
         //depending on rating or option do either..
         if(toolCritRating?.length > 0) {
+          console.log(tool.slug ,critSlug)
           let allSupported = true
-          for(const key in answer as number[]) {
+          for(const key of answer as number[]) {
+            console.log(key, toolCritRating)
             isRequested.set(critSlug, 2) //at least one wanted
-            if(!(key in (toolCritRating as number[]))) allSupported = false
+            if(!(toolCritRating as number[]).includes(key)) allSupported = false
           }
           if(allSupported) {
             isProvided.set(critSlug, true)

@@ -3,6 +3,19 @@
     "slug": "pytm",
     "name": "pytm",
     "description": "pytm ist ein auf Python basierendes Threat Modeling Tool, welches 2020 entwickelt wurde und Threat Modeling automatisierter und von Entwicklern nutzbar zu machen. Hierbei wird von Entwicklern eine Beschreibung des zu analysierenden Systems bereitgestellt. Auf dieser Basis erstellt pytm, je nach Bedarf, Datenflussdiagramme, Sequenz-Diagramme und gibt Informationen zu potenziellen Threats aus.",
+    "pros_cons": {
+      "advantages": [
+        "kostenlos",
+        "automatische Generierung von Datenflussdiagrammen, Sequenz-Diagrammen und Threat-Analysen",
+        "Einbindung in automatisierte build-/release-Pipelines möglich",
+        "Text-basiertes Modellieren von Systemarchitektur, d.h. Einbindung in Source Code Management Systeme und somit Revisionierbarkeit",
+        "Beschreibung individueller Threats möglich"
+      ],
+      "disadvantages": [
+        "nicht für das Betriebssystem Windows erhältlich",
+        "Beschreibung von Threats erfolgt in der Programmiersprache Python (kann Hürde darstellen, wenn Python nicht in Technologie-Stack enthalten oder gewünscht)"
+      ]
+    },
     "rating": {
       "agile-methoden": -1,
       "tool-integration": 1,
@@ -11,7 +24,7 @@
       "kosten": 1,
       "konfigurierbar": -1,
       "einstiegshürde": -1,
-      "multi-plattform": [1, 2, 3],
+      "multi-plattform": [1, 2],
       "templates": [1, 2]
     }
   },
@@ -19,6 +32,19 @@
     "slug": "mtmt",
     "name": "Microsoft Thread Modeling Tool",
     "description": "Das Microsoft Thread Modeling Tool richtet sich primär an Softwarearchitekten und ermöglicht es diesen, potenzielle Sicherheitslücken früh im Entwicklungsprozess zu erkennen und mit geeigneten Maßnahmen entgegenzuwirken.",
+    "pros_cons": {
+      "advantages": [
+        "kostenlos",
+        "geringe Einstiegshürde, da Bedienung (Modellierung von Threats) über einen grafischen Editor",
+        "Templates (sog. Stencils) für gängige Threats verfügbar",
+        "Templates können erstellt und projektübergreifend verwendet werden",
+        "generierte Dateien (tm7-Format) via Skript mit OWASP-Threat-Dragon kompatibel (siehe www.threatdragon.github.io/utils)"
+      ],
+      "disadvantages": [
+        "ausschließlich für das Betriebssystem Windows erhältlich",
+        "proprietäres Datenformat (tm7, tb7)"
+      ]
+    },
     "rating": {
       "agile-methoden": -1,
       "tool-integration": -1,
@@ -35,6 +61,19 @@
     "slug": "threagile",
     "name": "Threagile",
     "description": "Threagile ist ein Command-Line basiertes Threat Modeling Tool. Die Architektur der zu untersuchenden Anwendung wird in YAML-Dateien modelliert. Dabei können sog. Data Assets, Technical Assets, Communication-Links und Trust Boundaries definiert werden. Es ist leicht automatisierbar und daher sehr gut für agile Softwareentwicklungsprozesse geeignet. Da die Softwarearchitektur in YAML-Dateien definiert wird, lässt es sich auch gut in Version Control Systeme wie git einpflegen.",
+    "pros_cons": {
+      "advantages": [
+        "kostenlos",
+        "erleichterte Einbindung in build-/release-Pipelines, da Kommandozeilen basiert",
+        "Text-basiertes Modellieren von Systemarchitektur, d.h. Einbindung in Source Code Management Systeme und somit Revisionierbarkeit",
+        "Beschreibung eigener Threats möglich",
+        "verschiedene Dateiformate bzgl. der Output-Dateien erleichtern die Weiterverarbeitung von Analyseergebnissen",
+        "Open Source (MIT Lizenz)"
+      ],
+      "disadvantages": [
+        "aktuell keine Weiterentwicklung der Anwendung"
+      ]
+    },
     "rating": {
       "agile-methoden": -1,
       "tool-integration": 1,
@@ -51,6 +90,22 @@
     "slug": "owasp-thread-dragon",
     "name": "OWASP Thread Dragon",
     "description": "OWASP Threat Dragon ist ein grafisches und quelloffenens Threat-Modeling-Tool, das es erlaubt die drei verschiedenen Methodiken STRIDE, LIDDUN und CIA in Software-Entwicklungsprozessen zu nutzen.",
+    "pros_cons": {
+      "advantages": [
+        "kostenlos, permissives Lizenzmodell",
+        "leichte Erlernbarkeit",
+        "Cross-Plattform-Verfügbarkeit",
+        "hohe Flexibilität bzgl. der organisatorischen und methodischen Integration (Unterstützung verschiedener Threat Modeling Methoden, kollaborative Nutzung möglich)",
+        "hohe Flexibilität bei der Toolchain- und Workflow-Integration"
+      ],
+      "disadvantages": [
+        "stark vorgegebner Workflow",
+        "wenig Konfigurationsmöglichkeiten",
+        "wenig Hilfestellung beim Modellierungsprozess",
+        "geringe Unterstützung bei arbeitsorganisatorischen Aspekten (keine Abbildung von Prozessen auf der Ebene von Vorgehensmodellen, Teamorganisation, Compliance, etc.)",
+        "geringe technische Automatisierungs- und Integrationsfähigkeit innerhalb der Entwicklung-Toolchain"
+      ]
+    },
     "rating": {
       "agile-methoden": -1,
       "tool-integration": -1,
@@ -67,6 +122,18 @@
     "slug": "cairis",
     "name": "Cairis",
     "description": "Cairis steht für “Computer Aided Integration of Requirements and Information Security” und bietet eine Plattform für die Erarbeitung, Spezifikation und Validierung sicherer und benutzbarer Systeme.",
+    "pros_cons": {
+      "advantages": [
+        "kostenlos",
+        "Erstellung von Personas möglich",
+        "Erstellung von \"Environments\" möglich",
+        "intuitive Bedienung",
+        "Cross-Plattform-Verfügbarkeit (Web-basiert)",
+        "ausführliche Dokumentation vorhanden",
+        "API vorhanden"
+      ],
+      "disadvantages": []
+    },
     "rating": {
       "agile-methoden": 1,
       "tool-integration": 1,

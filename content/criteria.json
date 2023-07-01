@@ -2,41 +2,41 @@
   {
     "slug": "agile-methoden",
     "short": "Abbildung agiler Arbeitsmethoden möglich (User Stories, Sprints etc.)",
-    "name": "Abbildung agiler Arbeitsmethoden möglich (User Stories, Sprints etc.)"
+    "name": "Das Tool unterstützt die Abbildung agiler Arbeitsmethoden, wie bspw. User Stories, Sprints etc."
   },
   {
     "slug": "tool-integration",
     "short":"Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools",
-    "name": "Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools"
+    "name": "Eine Integration der vom Tool verwendeten und erzeugten Dateien in andere Tools für iterative Softwareentwicklung (z.B. CI/CD-Tools) ist ohne besonderen Aufwand möglich. "
   },
   {
     "slug": "arbeitsteiligkeit",
     "short": "Unterstützung von Arbeitsteiligkeit auf Personen-/Teamebene",
-    "name": "Unterstützung von Arbeitsteiligkeit auf Personen-/Teamebene"
+    "name": "Mehrere Personen oder alle Teammitglieder sollen während des Softwareentwicklungsprozesses parallel oder iterativ mit dem Tool arbeiten."
   },
   {
     "slug": "datenhaltung",
     "short": "Nicht-proprietäre interoperable Datenhaltung (z. B. Text-Formate)",
-    "name": "Nicht-proprietäre interoperable Datenhaltung (z. B. Text-Formate)"
+    "name": "Vom Tool verarbeitete sowie erzeugte Dateien (z.B. Berichte) sollen in nicht-proprietären Formaten vorliegen (z.B. txt, yaml), um bspw. eine flexible Weiterverarbeitung zu ermöglichen."
   },
   {
     "slug": "kosten",
     "short": "Kosten",
-    "name": "Das Tool soll kostenlos sein."
+    "name": "Das Tool ist kostenlos nutzbar."
   },
   {
     "slug": "konfigurierbar",
-    "short": "festgelegte Arbeitsweise / konfigurierbar",
-    "name": "festgelegte Arbeitsweise / konfigurierbar"
+    "short": "festgelegte Arbeitsweise/ konfigurierbar",
+    "name": "Das Tool kann konfiguriert werden und somit an die eigene Arbeitsweise/ das zu bearbeitende Softwareprojekt angepasst werden."
   },
   {
     "slug": "einstiegshürde",
     "short": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder",
-    "name": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder"
+    "name": "Die Nutzung des Tools ist intuitiv oder leicht erlernbar."
   },
   {
     "slug": "multi-plattform",
-    "short": "Welches Betriebssystem soll verwendet werden? (Antwort optional)",
+    "short": "Mögliche Betriebssystemd",
     "name": "Welches Betriebssystem soll verwendet werden? (Antwort optional)",
     "type": "option",
     "options": [
@@ -48,7 +48,7 @@
   {
     "slug": "templates",
     "short": "Soll das Tool vordefinierte Templates für gängige Threat-Modeling-Methoden bereitstellen? (Antwort optional)",
-    "name": "Soll das Tool vordefinierte Templates für gängige Threat-Modeling-Methoden bereitstellen? (Antwort optional)",
+    "name": "Das Tool stellt Templates für folgende Threat-Modeling-Methoden bereit. (Antwort optional)",
     "type": "option",
     "options": [
       { "key": 1, "name": "STRIDE" },
