@@ -6,7 +6,7 @@
   },
   {
     "slug": "tool-integration",
-    "short":"Integration in Tools für iterative Softwareentwicklung, z.B. CI/CD-Tools",
+    "short":"Toolchain-Integration",
     "name": "Eine Integration der vom Tool verwendeten und erzeugten Dateien in andere Tools für iterative Softwareentwicklung (z.B. CI/CD-Tools) ist ohne besonderen Aufwand möglich. "
   },
   {
@@ -21,22 +21,22 @@
   },
   {
     "slug": "kosten",
-    "short": "Kosten",
+    "short": "Kostengünstig/ kostenlos erhältlich",
     "name": "Das Tool ist kostenlos nutzbar."
   },
   {
     "slug": "konfigurierbar",
-    "short": "festgelegte Arbeitsweise/ konfigurierbar",
+    "short": "Konfigurierbarkeit",
     "name": "Das Tool kann konfiguriert werden und somit an die eigene Arbeitsweise/ das zu bearbeitende Softwareprojekt angepasst werden."
   },
   {
     "slug": "einstiegshürde",
-    "short": "geringe Einstiegshürde zur Einbindung aller Team-Mitglieder",
+    "short": "Geringe Einstiegshürde",
     "name": "Die Nutzung des Tools ist intuitiv oder leicht erlernbar."
   },
   {
     "slug": "multi-plattform",
-    "short": "Mögliche Betriebssystemd",
+    "short": "Mögliche Betriebssysteme",
     "name": "Welches Betriebssystem soll verwendet werden? (Antwort optional)",
     "type": "option",
     "options": [
@@ -47,7 +47,7 @@
   },
   {
     "slug": "templates",
-    "short": "Soll das Tool vordefinierte Templates für gängige Threat-Modeling-Methoden bereitstellen? (Antwort optional)",
+    "short": "Bereitstellung von Templates für Threat-Modeling-Methoden",
     "name": "Das Tool stellt Templates für folgende Threat-Modeling-Methoden bereit. (Antwort optional)",
     "type": "option",
     "options": [

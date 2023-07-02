@@ -45,6 +45,12 @@ const nav = reactive([
     target: "/result",
     show: () => store.done
   },
+  {
+    title: "Tools",
+    icon: "mdi-application-braces",
+    target: "/tool",
+    show: () => true
+  },
 ])
 </script>
 

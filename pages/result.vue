@@ -1,15 +1,15 @@
 <template>
   <div class="ma-8">
     <div v-if="!questionStore.done">
-      <v-btn color="primary" to="/threathelper" block>Start Test</v-btn>
+      <v-btn color="primary" to="/threathelper" block>Starte Test</v-btn>
     </div>
     <div v-else-if="!pending">
-      <h1>Ergebnis</h1>
+      <h1 class="text-primary">Ergebnis</h1>
       <v-expansion-panels class="mt-3">
         <v-expansion-panel v-for="(result, index) in toolResult" :key="result.tool.slug">
           <v-expansion-panel-title>
             <div class="d-flex align-center w-100" style="gap: 3em">
-              <span class="circled">{{ index + 1 }}</span>
+              <span class="circled text-primary">{{ index + 1 }}</span>
               <div class="w-100 d-flex justify-space-between align-center w-100">
                 <h3 :class="result.accepted? '' : 'invalid'">{{ result.tool.name }}</h3>
                 <span class="mr-10">{{ result.points }} / {{ criteria.body.length }} Punkte</span>
@@ -132,8 +132,8 @@ const toolResult = computed(() => {
 
 <style scoped>
 .circled {
-  color: green;
-  border: 1px solid green;
+  font-weight: 600;
+  border: 2px solid rgb(var(--v-theme-primary));
   border-radius: 89px;
   padding: 5px 8px;
 }
