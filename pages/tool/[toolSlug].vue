@@ -63,7 +63,7 @@ import {CriteriaEntry, ToolEntry} from "~/utils/types";
 
 const toolSlug = useRoute().params.toolSlug
 
-const {data: tool, pending: pendingTools} = useAsyncData<ToolEntry>('tools-tool',
+const {data: tool, pending: pendingTools} = useAsyncData<ToolEntry>('tools-tool-' + toolSlug,
     () => queryContent('/tools').findOne()
         .then(data => data.body)
         .then(bodyArr => bodyArr.filter(it => it.slug === toolSlug)[0] as ToolEntry)
