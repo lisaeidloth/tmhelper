@@ -56,7 +56,7 @@ import {useQuestionStore} from "~/stores/questionStore";
 const questionStore = useQuestionStore()
 questionStore.reset()
 
-const {data, pending} = useAsyncData<CriteriaContent>('index', () => queryContent('/criteria').findOne())
+const {data, pending} = useAsyncData<CriteriaContent>('index-th', () => queryContent('/criteria').findOne())
 const label = {
   0: "egal",
   1: "wichtig",

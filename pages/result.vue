@@ -54,8 +54,8 @@ import {ResultEntry} from "~/utils/types";
 import {el} from "vuetify/locale";
 
 const questionStore = useQuestionStore()
-const { data:tools, pending:pendingTools } = useAsyncData('tools', () => queryContent('/tools').findOne())
-const { data:criteria, pending:pendingCriteria } = useAsyncData('criteria', () => queryContent('/criteria').findOne())
+const { data:tools, pending:pendingTools } = useAsyncData('tools-result', () => queryContent('/tools').findOne())
+const { data:criteria, pending:pendingCriteria } = useAsyncData('criteria-result', () => queryContent('/criteria').findOne())
 
 const pending = computed(() => {
   return pendingTools.value || pendingCriteria.value

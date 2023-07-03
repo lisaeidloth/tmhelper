@@ -12,10 +12,6 @@
 
 <script setup lang="ts">
 
-import {useAsyncData} from "#imports";
-
-const {data, pending} = useAsyncData('tools', () => queryContent('/tools').findOne())
-
 </script>
 
 <style scoped></style>

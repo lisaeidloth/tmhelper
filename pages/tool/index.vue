@@ -13,9 +13,7 @@
 import {useAsyncData} from "#imports";
 import {ToolEntry} from "~/utils/types";
 
-const toolSlug = useRoute().params.toolSlug
-
-const {data: tools, pending: pendingTools} = useAsyncData<ToolEntry[]>('tools',
+const {data: tools, pending: pendingTools} = useAsyncData<ToolEntry[]>('tools-tools',
     () => queryContent('/tools').findOne()
         .then(data => data.body)
         .then(bodyArr => bodyArr as ToolEntry[])

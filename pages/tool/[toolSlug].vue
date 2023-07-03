@@ -21,7 +21,7 @@
           </v-list>
         </div>
         <div class="d-flex flex-column flex-grow-1" style="flex-basis: 0">
-          <h3 class="mt-2 py-2 pl-1 bg-grey-lighten-3">Vorteile</h3>
+          <h3 class="mt-2 py-2 pl-1 bg-grey-lighten-3">Nachteile</h3>
           <v-list density="compact">
             <v-list-item
                 v-for="advantages of tool.pros_cons.disadvantages"
@@ -63,13 +63,13 @@ import {CriteriaEntry, ToolEntry} from "~/utils/types";
 
 const toolSlug = useRoute().params.toolSlug
 
-const {data: tool, pending: pendingTools} = useAsyncData<ToolEntry>('tools',
+const {data: tool, pending: pendingTools} = useAsyncData<ToolEntry>('tools-tool',
     () => queryContent('/tools').findOne()
         .then(data => data.body)
         .then(bodyArr => bodyArr.filter(it => it.slug === toolSlug)[0] as ToolEntry)
 )
 
-const {data: criterias, pending: pendingCritertias} = useAsyncData("criteria",
+const {data: criterias, pending: pendingCritertias} = useAsyncData("criteria-tool",
     () => queryContent('/criteria').findOne()
         .then(data => data.body as Array<CriteriaEntry>)
 )
