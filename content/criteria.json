@@ -7,7 +7,7 @@
   {
     "slug": "tool-integration",
     "short":"Toolchain-Integration",
-    "name": "Eine Integration der vom Tool verwendeten und erzeugten Dateien in andere Tools für iterative Softwareentwicklung (z.B. CI/CD-Tools) ist ohne besonderen Aufwand möglich. "
+    "name": "Eine Integration in andere Tools für iterative Softwareentwicklung (z.B. CI/CD-Tools) ist ohne besonderen Aufwand möglich. "
   },
   {
     "slug": "arbeitsteiligkeit",
@@ -27,7 +27,7 @@
   {
     "slug": "konfigurierbar",
     "short": "Konfigurierbarkeit",
-    "name": "Das Tool kann konfiguriert werden und somit an die eigene Arbeitsweise/ das zu bearbeitende Softwareprojekt angepasst werden."
+    "name": "Das Tool kann konfiguriert werden und somit an die eigene Arbeitsweise bzw. das zu bearbeitende Softwareprojekt angepasst werden."
   },
   {
     "slug": "einstiegshürde",
@@ -52,7 +52,9 @@
     "type": "option",
     "options": [
       { "key": 1, "name": "STRIDE" },
-      { "key": 2, "name": "PASTA" }
+      { "key": 2, "name": "PASTA" },
+      { "key": 3, "name": "LINDDUN" },
+      { "key": 4, "name": "CIA" }
     ]
   }
 ]
